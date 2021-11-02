@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var student = {
+		이름 : '연하진',
+		국어 : 92,
+		영어 : 85,
+		수학 : 93,
+		과학 : 84
+	}
+	
+	var output = '';
+	
+	output+='이름: '+student.이름+'\n';
+	output+='국어: '+student.국어+'\n';
+	output+='영어: '+student.영어+'\n';
+	output+='수학: '+student.수학+'\n';
+	output+='과학: '+student.과학+'\n';
+	output+='총점: '+(student.국어+student.영어+student.수학+student.과학)+'\n';
+	
+	alert(output);
+	//==> 이런 코드를 with를 사용하면 쉽게 처리가능
+	
+	var output='';
+	
+	with(student){
+		output+='이름: '+이름+'\n';
+		output+='국어: '+국어+'\n';
+		output+='영어: '+영어+'\n';
+		output+='수학: '+수학+'\n';
+		output+='과학: '+과학+'\n';
+		output+='총점: '+(국어+영어+수학+과학)+'\n';
+		//==> student에서 식별자들을 찾겠다는 뜻
+	}
+	
+	alert(output);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

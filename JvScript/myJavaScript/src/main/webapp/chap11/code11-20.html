@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+</script>
+<style>
+label {
+	display: inline-block;
+	width: 110px;
+}
+</style>
+
+</head>
+<body>
+	<!-- 실제 연결주소 http://localhost:8080/myJavascript/chap11/pass_change.jsp?param~ -->
+	<form action="pass_change.jsp" method="POST">
+		<fieldset>
+			<legend>비밀번호 변경</legend>
+			<label for="id">이름</label> <input type="text" id="id" name="id" /><br />
+			<label for="passwd">비밀번호</label> <input type="password" id="passwd"
+				name="passwd" /><br /> <label for="pass_check">비밀번호 확인</label> <input
+				type="password" id="pass_check" name="pass_check" /><br />
+
+			<hr />
+			<input type="submit" id="change" value="변경" />
+
+
+		</fieldset>
+	</form>
+
+</body>
+</html>

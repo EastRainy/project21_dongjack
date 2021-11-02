@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	/*
+	사용자가 입력양식 태그에 입력한 값을 읽고 변경 버튼을 클릭한 경우 다음의 작업을 수행한다.
+	
+	1. id는 반드시 존재해야 하고 3자 이상
+	2. passwd는 3자이상, 반드시 존재해야한다.
+	3. passcheck은 반드시 passwd와 같아야 한다
+	4. 위 조건을 모두 만족하는 경우 ok를 출력하고 아닌경우 이유를 출력
+	
+	*/
+	function changeHandler(){
+		
+		var id = document.querySelector('#id');
+		var passwd = document.querySelector('#passwd');
+		var pass_check = document.querySelector('#pass_check');
+		
+		
+		if(id.value.length >=3 && passwd.value.length >=3 && passwd.value===pass_check.value){
+			alert("비밀번호를 올바르게 변경했습니다.")
+		}
+		else{
+			alert("올바른 값을 입력하세요.")
+		}
+		
+		id.value = '';
+		passwd.value='';
+		pass_check.value='';
+		
+		
+		
+		
+		var result = true;
+		
+	
+		
+	}	
+	function init() {
+		
+		var change = document.querySelector('#change');
+		change.onclick = changeHandler;
+		
+	}
+	
+	window.onload = init;
+	
+	
+	
+	</script>
+	<style>
+	label {
+		display:inline-block;
+		width:110px;
+	}
+	
+	</style>
+	
+</head>
+<body>
+	
+	<fieldset>
+	<legend>비밀번호 변경</legend>
+	<label for="id">이름</label>
+	<input type="text" id="id" /><br />
+	
+	<label for="passwd">비밀번호</label>
+	<input type="password" id="passwd" /><br />
+	
+	<label for="pass_check">비밀번호 확인</label>
+	<input type="password" id="pass_check" /><br />
+	
+	<hr />
+	<input type="button" id="change" value="변경" /> 
+	
+	
+	</fieldset>
+	<!-- 
+	
+	label의 for와 id가 같은것끼리 매칭 
+	input의 type이 무엇을 입력받을지 결정.
+	text - 문자, password - 비밀번호(자동으로 가려짐)
+	
+	
+	
+	-->
+	
+	
+	
+	
+</body>
+</html>

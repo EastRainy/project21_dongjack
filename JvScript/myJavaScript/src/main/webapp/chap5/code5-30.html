@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	
+	//타임 재기 - setTimer(지속적 자원 차지 x), serInterval(지속적 자원 차지)
+	//얼럿창이 뜰 때 프로그램이 멈추므로 시간측정 등을 할때는 타이머를 사용하지 말것
+	
+	
+	window.onload = function(){
+		var interval_id = setInterval(function(){
+			document.body.innerHTML += '<p>' + new Date().toLocaleString() +'</p>'
+		}, 1000);
+		
+		setTimeout(function(){
+			clearInterval(interval_id);
+		}, 10000);
+	}
+	
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

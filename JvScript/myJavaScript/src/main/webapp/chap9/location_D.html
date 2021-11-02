@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>location_D</title>
+	<script>
+	
+	
+	params = location.search;
+	
+	window.onload = function(){
+		params = location.search.substring(1);
+		params = params.split('&');
+		
+		var output = '';
+		
+		for (var i=0;i<params.length;i++){
+			var param = params[i].split('=');
+			output +='<h3>'+param[0]+' : '+decodeURIComponent(param[1])+'</h3>';
+		}
+		
+		
+		document.body.innerHTML += output;
+		
+	}
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

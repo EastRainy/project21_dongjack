@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 이벤트 버블링 테스트
+	
+	/*
+	
+	이벤트 전달을 막는 방법 - 이벤트 객체의 stopPropagation()메서드 사용
+	
+	*/
+
+	
+	
+</script>
+<style>
+div, h1 {
+	border: 3px solid black;
+	padding: 20px;
+	margin: 20px;
+}
+</style>
+
+</head>
+<body>
+
+	<div onclick="alert('outer-div')">
+		<div onclick="alert('inner-div')">
+			<div onclick="alert('end-div')">
+				<h1 onclick="alert('header')">Header</h1>
+			</div>
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>

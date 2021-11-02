@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	var output='';
+	
+	output += '<xmp>href: ' + location.href + '</xmp>';
+	output += '<h3>protocol: ' + location.protocol + '</h3>';
+	output += '<h3>host: ' + location.host + '</h3>';
+	output += '<h3>hostname: ' + location.hostname + '</h3>';
+	output += '<h3>port: ' + location.port + '</h3>';
+	output += '<h3>pathname: ' + location.pathname + '</h3>';
+	output += '<h3>search: ' + location.search + '</h3>';
+	output += '<h3>hash: ' + location.hash + '</h3>';
+	
+	
+	window.onload = function(){
+		document.body.innerHTML = output;
+	}
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

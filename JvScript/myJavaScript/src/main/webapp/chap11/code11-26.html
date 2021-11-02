@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 이벤트 버블링 테스트
+
+	/*
+	
+	이벤트 전달을 막는 방법 - 이벤트 객체의 stopPropagation()메서드 사용
+	
+	 */
+
+	window.onload = function() {
+
+		document.querySelector('#outer').onclick = function() {
+			alert('outer-div');
+		}
+		document.querySelector('#inner').onclick = function() {
+			alert('inner-div');
+		}
+		document.querySelector('#end').onclick = function() {
+			alert('end-div');
+		}
+		document.querySelector('#header').onclick = function(e) {
+			alert('header');
+			e.stopPropagation();
+		}
+
+	}
+</script>
+<style>
+div, h1 {
+	border: 3px solid black;
+	padding: 20px;
+	margin: 20px;
+}
+</style>
+
+</head>
+<body>
+
+	<div id="outer">
+		<div id="inner">
+			<div id="end">
+				<h1 id="header">Header</h1>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

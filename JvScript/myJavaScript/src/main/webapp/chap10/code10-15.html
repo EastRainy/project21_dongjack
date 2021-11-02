@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	function init(){
+		
+		var header1 = document.getElimentById('header1');
+		var header2 = document.getElimentById('header2');
+		
+		header1.innerHTML = 'with getElementById -1';
+		header1.innerHTML = 'with getElementById -2';
+		
+		
+		
+	}
+	
+	window.onload = init();
+	
+	
+	//중복된 id가 있는 경우 맨 첫번째만 검색하고 뒤에것은 무시한다.
+	
+	</script>
+</head>
+<body>
+	
+	<h1 id="header1">Heading 1</h1>
+	<h1 id="header2">Heading 2</h1>
+	
+	
+	
+	
+</body>
+</html>

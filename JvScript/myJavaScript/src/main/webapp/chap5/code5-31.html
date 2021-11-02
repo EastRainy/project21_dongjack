@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	//인코딩 예제
+	
+	var url = 'https://search.naver.com/search.naver?query=';
+	var search_word = prompt('검색어를 입력하세요');
+	
+	var encode_url = escape(url + search_word);
+	alert(encode_url);
+	
+	var decode_url = unescape(encode_url);
+	alert(decode_url);
+	
+	//encode, decode(특수문자 형식까지 전부 인코딩하기 때문에 주소에 사용하지 않음)
+	//url만 따로 escape로 인코딩하여 사용해도 웹에서는 사용하지 않는 방식으로 인코딩하기 때문에
+	//따로 써서 붙여도 작동하지 않음
+	//영문 알파벳, 일부 특문을 제외하고 모두 인코딩
+	//일반 사용자 데이터 인코딩용
+	
+	var encode_url = encodeURI(url + search_word);
+	alert(encode_url);
+	
+	var decode_url = decodeURI(encode_url);
+	alert(decode_url);
+	/*
+	웹 주소에 사용되는 방식의 인코딩
+	주소 전체를 한번에 인코딩할때
+	
+	*/
+	var encode_url = encodeURIComponent(search_word);
+	alert(url+encode_url);
+	
+	var decode_url = decodeURIComponent(encode_url);
+	alert(decode_url);
+	/*
+	암호화 할 타겟 부분만 인코딩할때 사용
+	*/
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

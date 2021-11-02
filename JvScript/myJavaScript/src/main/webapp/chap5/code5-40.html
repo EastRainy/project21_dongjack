@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	/*
+	
+	무한값/NaN값인지 판정할때는 비교연산자 사용 불가
+	
+	이를 위해 isFinite, isNaN 함수 사용
+
+	*/
+
+	var num1 = 1/0;
+	var num2 = 5/2;
+	
+	alert(num1 + ' ' + isFinite(num1));//무한이므로 false
+	alert(num2+ ' ' + isFinite(num2));
+	
+	var num3 = 10/'a';
+	
+	alert(num3 + ' ' + isNaN(num3));//NaN이므로 true
+	
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

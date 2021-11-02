@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+		/*
+			자바스크립트에도 래퍼클래스가 존재
+			Number, String, Boolean
+			
+			
+		*/
+		var num1 = 1234;
+		alert(typeof(num1));//number타입
+		
+		var num2 = new Number(4321);
+		alert(typeof(Number));//object타입
+		//num2를 그냥 출력하면 4321출력됨 = 자동으로 toString메서드 사용됨
+		
+		age = '23';
+		
+		ageNum = Number(age);
+		
+		//형변환
+		
+		/*
+			Boolean();의 경우 값 0, NaN, '', null, undefined일 때만 False 반환
+			문자 '0'이나 'false'는 값이 있는것으로 취급하여 true반환
+			
+			
+			== <- 암시적 형변환때문에 true값만 나올 수 있음
+			
+			그럴 땐 !==, === 사용
+		
+		*/
+		
+		
+		/*
+			NaN : 숫자가 아닌 값 입력시 출력되는 값 => 자료형 숫자이나 자바스크립트로 나타낼 수
+				  없는 숫자를 의미
+			자바스크립트에선 복소수 표현이 불가능하므로 복소수도 NaN표시됨
+			
+		*/
+		
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

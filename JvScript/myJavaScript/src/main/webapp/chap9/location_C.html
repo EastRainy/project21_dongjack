@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Location_C</title>
+	<script>
+	var user_info = prompt('이름, 성별, 나이를 입력해주세요','홍길동 남자 24');
+	
+	
+	user_info = user_info.split(' ');
+	var url ='http://localhost:8080/myJavaScript/chap9/location_D.html?';
+	
+	url += 'name='+user_info[0];
+	url += '&gender='+user_info[1];
+	url += '&age='+user_info[2];
+	
+	location.assign(url);
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

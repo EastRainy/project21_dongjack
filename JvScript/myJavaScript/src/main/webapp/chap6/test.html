@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	//객체 생성 {} 
+	
+	var product = {
+			제품명 : '7D 건조 망고',
+			유형 : '당절임',
+			성분 : '망고, 설탕, 메타중아황산나트륨, 치자황색소',
+			원산지 : '필리핀'
+	}
+	
+	alert(product.성분);
+	
+	/*
+	객체의 속성에 접근할 시 속성명을 부르는 것으로 가능
+	
+	product['제품명'] = '7D 건조 망고'
+	
+	쉽게 접근은 .을 이용
+	
+	product.제품명 = '7D 건조 망고'
+	
+	_,$이외의 특문 등을 사용하기 위해 문자열로 식별자를 대체 가능
+	하지만 개체명.속성명 의 형태로는 사용할 수 없고 대괄호 접근법으로만 접근가능
+	
+	객체 안의 함수 = 메서드
+	
+	*/
+	
+	var person ={
+			name : '윤인성',
+			eat : function(food){
+				alert(this.name + '이 '+food+'을/를 먹습니다.');
+			}
+	}
+	
+	person.eat('밥');
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

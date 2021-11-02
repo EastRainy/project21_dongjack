@@ -1,0 +1,32 @@
+
+<!-- ejs_page1.ejs -->
+
+<%
+    let person ={
+        name:'longlee',
+        gender:'male',
+        age:'24',
+        description:'ejs example 1'
+    }
+%>
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>ejs page-1</title>
+    </head>
+    <body>
+        <h1>ejs exmaple 1 </h1>
+        <hr />
+
+        <% 
+            for(let key in person){  
+        %>
+        <h3><%=key%> : <%=person[key] %></h3>
+        <%
+            }
+        %>
+
+    </body>
+</html>

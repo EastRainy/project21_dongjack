@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function init() {
+		header = document.querySelector('h1');//제일 먼저 나오는 h1만 선택
+		header.innerHTML = 'with quarySelector';
+		
+		item1 = document.querySelector('#item1');
+		item1.innerHTML += ' +item 1';//# - id선택자
+		
+		item2 = document.querySelector('.item2');
+		item2.innerHTML += ' +item 2';//. - class선택자
+		
+	}
+	window.onload = init;
+</script>
+</head>
+<body>
+
+
+	<h1 class="item2">header 1</h1>
+	<h1 id="item1">header 2</h1>
+	<h1 class="item2">header 3</h1>
+
+</body>
+</html>

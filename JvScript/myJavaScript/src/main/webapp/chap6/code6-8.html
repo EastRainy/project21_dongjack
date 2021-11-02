@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	var product = {
+			name :'Microsoft Visual studio 2019 Ultimate',
+			price :'15,000,000',
+			language:'한국어',
+			supportOS:'Win 32/64',
+			subscription:true
+	}
+	
+	var output = '';
+	for(var key in product){
+		output += '<h3>@' + key + ' : ' + product[key] +'</h3>';
+		//product.key를 사용하면 안되는 이유 => key가 식별자 취급이 아니라 string타입이므로
+	}
+	for(var key in product){
+		output += '<h3>@' + key + ' : ' + product.key +'</h3>';
+		//product.key를 사용하면 안되는 이유 => key가 식별자 취급이 아니라 string타입이므로
+	}
+	
+	window.onload = function(){
+			document.body.innerHTML = output;
+	}
+	
+	</script>
+</head>
+<body>
+
+
+
+	
+</body>
+</html>

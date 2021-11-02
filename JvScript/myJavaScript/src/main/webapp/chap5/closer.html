@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	//버튼 클릭 이벤트 처리
+	window.onload = function(){
+		var msg = '버튼을 클릭했습니다.';
+		var btn = document.getElementById('btn');
+		
+		//이벤트 규칙 : on+eventname
+		
+		
+		btn.onclick = function(){alert(msg);}
+		//언제 버튼 누를지 모르지만 클로저에서 msg 변수를 계속 저장
+	}
+	
+	/*
+	
+	클로저 공간은 함수 각각이 실행될 때 개별로 적용됨
+	
+	*/
+	
+	
+	
+	</script>
+</head>
+<body>
+	<h1>클로저 테스트</h1>
+	<hr />
+	<button id='btn'>Click</button>
+	
+</body>
+</html>

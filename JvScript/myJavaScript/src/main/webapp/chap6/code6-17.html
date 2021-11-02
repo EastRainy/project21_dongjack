@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	var student = {};
+	
+	//자바스크립트는 객체지향언어이면서 특이하게 객체의 속성을 추가, 삭제할 수 있다.
+	
+	student.이름 = '이성구';
+	student.취미 = '자전거';
+	student.특기 = '강의';
+	student.장래희망 = '건물주';
+	
+	//동적 속성 추가
+	
+	student.toString = function(){
+		var output = '';
+		
+		for(var key in student){
+			if(key !== 'toString'){
+				output += '<p>' + key + ' : ' + this[key] + '</p>';
+			}
+		}
+		return output;
+	}
+	//동적 메서드 추가
+	
+	
+	window.onload = function(){
+		document.body.innerHTML = student.toString();
+		
+		document.body.innerHTML += '<hr />';
+		
+		delete student.장래희망;
+		//동적 속성 삭제
+		document.body.innerHTML = student.toString();
+		
+	}
+	
+	
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

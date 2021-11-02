@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	/*
+	10장 - 문서 객체 모델(DOM)
+	
+	태그 - 페이지 안에 존재하는 html이나 body태그를 태그라 부름
+	
+	문서 객제 - 안에 있는 요소 객체 노드들을 트리 형태로 구조화
+	
+	정적으로 문서 생성 - 처음 HTML 페이지에 적혀 있는 태그를 읽으며 트리를 생성(DOM Tree)
+	동적으로 요소 생성 - 자바스크립트로 원래 HTML 페이지에 없는 문서 객체를 생성하여 추가
+	
+	
+	요소 객체(Elements)
+		- 텍스트 노드를 갖는 객체와 갖지 않는 객체로 구성
+		
+		
+	document 객체의 요소
+		document.createElement(tagname) - tagname을 지닌 요소 생성
+		.createTextNode(text) - text노드를 생성
+		.appentChild() - 노드를 연결 
+	
+		
+		
+		
+		이미지 태그 - 텍스트 노드 대신 많은 속성이 있음
+		
+		.getElementById() - id값으로 속성을 가져옴. id는 중복될 수 없으므로 하나씩
+		
+		.getElementsByName(name) - name속성으로 객체를 찾아 가져옴. 단 name은 똑같은 속성을 가지는
+								  중복을 가질 수 있으므로 Elements로 배열을 가져옴을 의미함
+		.getElementsByTagName(Tagname) - Tagname으로 검색하여 배열로 가져옴
+		
+		.querySelector(선택자) - 가장 처음 선택되는 선택자를 가져옴
+		.querySelectorAll(선택자) - 선택자로 선택되는 문서 객체를 배열로 가져옴
+		
+		
+		
+		문서 객체의 스타일 변경(동적 스타일 적용) - 중요!
+		
+		style 속성 사용
+		1. getElementById() 메서드를 문서 객체를 가져옴
+		2. style 속성에 있는 border, color, fontFamily 속성을 지정
+		3. CSS에 입력하는 것과 같은 형식으로 입력
+		
+		
+		
+		.removeChild(child) - 문서 객체의 자식 노드 제거
+		
+		
+		
+	*/
+	
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

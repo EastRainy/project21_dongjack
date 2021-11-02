@@ -1,0 +1,24 @@
+
+<!-- ejs_page1.ejs -->
+
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>ejs page-2</title>
+    </head>
+    <body>
+        <h1>ejs exmaple 2 </h1>
+        <hr />
+
+        <% 
+            for(let key in person){  
+        %>
+        <h3><%=key%> : <%=person[key] %></h3>
+        <%
+            }
+        %>
+
+    </body>
+</html>

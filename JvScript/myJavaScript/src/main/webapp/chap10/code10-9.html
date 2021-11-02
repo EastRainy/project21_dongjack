@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	function init(){
+		
+		img = document.createElement('img');
+		
+		/*
+		setAttribute(name, value) - 객체의 속성 지정/수정
+		getAttribute(name) - 객체의 속성을 가져옴
+		
+		이때 명시적으로 추가한 커스텀 데이터 속성이라고 구분하기 위해 name을
+		data-property
+		형식으로 앞에 data-를 붙여 표시해야 브라우저가 무시하지 않는다.
+		*/
+		
+		img.setAttribute('src','icon_6.png');
+		img.setAttribute('width', 300);
+		img.setAttribute('data-property','오목눈이');
+		
+		
+		
+		
+		
+		document.body.appendChild(img);
+		
+	}
+	
+
+	
+	window.onload = init;
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

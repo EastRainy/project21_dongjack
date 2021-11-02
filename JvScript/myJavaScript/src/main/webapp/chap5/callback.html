@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	/*
+	콜백함수 - 함수를 인자로 받는 함수
+	콜백함수는 주로 비동기 처리에 많이 사용됨
+	
+	
+	*/
+	
+	
+	function call_ten_Times(callback){
+		
+		for(var i = 0; i<10; i++){
+			callback();
+		}
+		
+	}
+	
+	var callback = function(){
+		alert('콜백함수 호출');
+	}
+	
+	call_ten_Times(callback);
+	
+	
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

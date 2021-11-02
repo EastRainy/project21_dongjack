@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	
+	/*
+	
+	screen객체
+	
+	웹 브라우저의 화면이 아닌 운영체제 화면의 속성을 가지는 객체
+	
+	width, height - 너비, 높이
+	availWidth, availHeight - 실제 화면에서 사용 가능한 너비, 높이. 단 지원 안하는 경우도 많으므로 주의
+	colorDepth - 사용 가능한 색상 수
+	pixelDepth - 한 픽셀당 비트수
+	
+	
+	*/
+	
+	var output = '<h3>' + screen.width + ' x ' + screen.height + '</h3>';
+	output +=  '<h3>' + screen.availWidth + ' x ' + screen.availHeight + '</h3>';
+	output +=  '<h3>' + screen.colorDepth + ' x ' + screen.pixelDepth + '</h3>';
+	
+	
+	window.onload = function(){
+		document.body.innerHTML = output;
+	}
+	
+	
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

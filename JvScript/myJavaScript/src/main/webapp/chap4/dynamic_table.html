@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		
+	
+		
+		var row_col = prompt('행과 열의 크기를 입력하세요.','3 4');
+		
+		row_col = row_col.split(' ');
+		var row = row_col[0] * 1;
+		var col = row_col[1] * 1;
+		//사용자가 입력한 테이블의 구조를 생셩하여 body의 내용으로 보이는 코드 생성
+	
+		
+		table = '<table>';
+		
+		for(i = 0;i<col;i++){
+			table += '<tr>';
+			for(j=0;j<row;j++){
+				
+				table+='<td>';
+				table = table + (i+1) + '행 ' + (j+1) + '열'
+				table+='</td>'
+			}
+			table+='</tr>';
+			
+		}
+		
+		table += '</table>';
+	
+	window.onload = function(){
+		document.body.innerHTML = table;
+		
+	}
+		
+	</script>
+	<style>
+	table, td{
+		border: 2px solid gray;
+		border-collapse: collapse;
+	}</style>
+</head>
+<body>
+	
+</body>
+</html>

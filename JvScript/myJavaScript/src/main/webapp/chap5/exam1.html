@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	/*
+	
+	1.
+	
+	function test(param1, param2);
+	
+	 - param1, param2 모두 숫자인경우 두숫자의 합 반환
+	 - 모두 문자열인경우 두 문자열 사이 공백을 포함하여 연결 반환
+	 - 그 외의 경우 -1반환	
+	*/
+	
+	var test = function(param1, param2){
+		 
+		 if(typeof(param1) === 'number' && typeof(param2) === 'number'){
+			 var re = param1 + param2;
+			 return(re);
+		 }
+		 else if (typeof(param1) === 'string' && typeof(param2) === 'string'){
+			 var re = param1 + ' ' + param2;
+			 return(re);
+		 }
+		 else{
+			 return(-1);
+		 }
+
+	 }
+	
+	alert(test(1,2));
+	
+	alert(test('a','b'));
+	
+	alert(test(1,'a'));
+	
+	
+	
+	
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

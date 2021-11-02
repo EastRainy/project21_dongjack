@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	/*
+	
+	location 객체
+	
+	 - 개발자에게 매우 중요한 객체
+	 - 브라우저의 주소 표시줄과 관련된 객체. 현재 URI에 대한 정보, 새로운 URI로 이동 등을 작동
+	
+	 
+	 location의 속성
+	 
+	 ex(https://search.naver.com/search.naver?whert=~~~~~... 일 때
+	 href : 문서의 url 주소
+	 - https://search.naver.com/search.naver?whert=~~~~~...
+	 
+	 host : 호스트의 이름과 포트 번호
+	 - search.naver.com:80 <- port번호
+	 
+	 hostname : 호스트 이름
+	 port : 포트번호
+	 
+	 pathname : 디렉토리 경로(뒤의 파라메터)
+	 whert=~~~~~...
+	 
+	 protocol : 프로토콜 종류
+	 https
+	 
+	 
+	 assign(url) - 해당 URL로 이동
+	 
+	 reload() - 새로고침
+	 replace(url) - URL로 대체
+	 
+	
+	*/
+	
+	
+	var url = 'http://localhost:8080/myJavaScript/chap9/location_B.html?param1=val1&param2=val2#alpha';
+	
+	location.assign(url);
+	
+	//해당 url로 이동
+	
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

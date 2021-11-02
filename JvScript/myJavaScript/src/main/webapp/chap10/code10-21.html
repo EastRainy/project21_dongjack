@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function init() {
+		
+		for(var i = 0; i<headers.lenght; i++){
+			headers[i].innerHTML = 'with querySelector - ' +(i+1);
+		}
+		
+	
+		item1 = document.querySelectorAll('#item1');
+		item1[0].innerHTML += ' +item 1';
+		
+		item2 = document.querySelectorAll('.item2');
+
+		for(var i=0; i<item2.length;i++){
+			item2[i].innerHTML += ' + item2';
+		}
+		
+	}
+	window.onload = init;
+</script>
+</head>
+<body>
+
+
+	<h1 class="item2">header 1</h1>
+	<h1 id="item1">header 2</h1>
+	<h1 class="item2">header 3</h1>
+
+</body>
+</html>

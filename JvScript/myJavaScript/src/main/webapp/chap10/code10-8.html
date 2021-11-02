@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	function init(){
+		
+		img = document.createElement('img');
+		
+		img.src = 'icon_6.png';
+		img.width = 300;
+		//가로세로 비율을 유지하기 위해 height는 보통 생략함
+		img.hobby = '오목눈이';
+		//이렇게 추가해도 img의 표준이 아니므로 잘못된 속성은 무시해버림
+		
+		//단 HTML5에 와서 개발자가 임의로 속성을 추가할 수 있는 커스텀 데이터 속성이 추가됨
+		//이를 사용하기 위해선 동적 속성 추가로는 사용할 수 없음. 속성 관련 메서드가 따로 있음
+		
+		/*
+		setAttribute(name, value) - 객체의 속성 지정/수정
+		getAttribute(name) - 객체의 속성을 가져옴
+		
+		이때 명시적으로 추가한 커스텀 데이터 속성이라고 구분하기 위해 name을
+		data-property
+		형식으로 앞에 data-를 붙여 표시해야 브라우저가 무시하지 않는다.
+		*/
+		
+		
+		
+		document.body.appendChild(img);
+		
+	}
+	
+
+	
+	window.onload = init;
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

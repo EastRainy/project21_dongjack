@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	function cEvent(){
+		
+		alert('버튼을 클릭했습니다.');
+
+		this.removeEventListener('')
+		
+	}
+	
+	function init(){
+		/*
+		document.querySelector('#btn').addEventListener('click', function(){
+			alert('버튼을 클릭했습니다.');
+
+			this.removeEventListener('');//버튼을 1회용으로 만들때 사용
+			//핸들러가 이름이 없는 익명의 함수는 지정이 불가능
+		
+		})
+		*/
+		document.querySelector('#btn').addEventListener('click', cEvent());
+		
+	}
+	
+	window.addEventListener('load', init);	
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

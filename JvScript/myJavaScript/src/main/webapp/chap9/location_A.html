@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	window.onload = function(){
+		
+		var assign = document.getElementById('assign');
+		assign.onclick = function(){
+			var url = 'http://localhost:8080/myJavaScript/chap9/location_B.html?param1=val1&param2=val2#alpha';
+			location.assign(url);
+		}
+		var replace = document.getElementById('replace');
+		replace.onclick = function(){
+			var url = 'http://localhost:8080/myJavaScript/chap9/location_B.html?param1=val1&param2=val2#alpha';
+			location.replace(url);
+		}
+
+		}
+	</script>
+</head>
+<body>
+
+
+	<button id=assign>assign location_B</button>
+	<button id=replace>replace location_B</button>
+</body>
+</html>

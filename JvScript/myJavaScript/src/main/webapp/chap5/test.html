@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	function test(param){
+		return param;
+		
+	}
+	
+	result = test(1234);
+	alert(typeof(result) + ' : ' + result);
+	
+	result = test('apple');
+	alert(typeof(result) + ' : ' + result);
+	
+	result = test(true);
+	alert(typeof(result) + ' : ' + result);
+	
+	result = test({});
+	alert(typeof(result) + ' : ' + result);
+	
+	
+	/*
+	자바스크립트 함수는 리턴값이 여러 종류일 수 있다.
+	값이 없으면 undefined
+	동적 타입이기 때문에 어떤 값이든 받고 상황마다 다르게 취급한다.
+	
+	=> 그것때문에 입력값이 달라지면 출력값이 달라질 가능성이 있다.
+	
+	
+	자바스크립트는 function scop은 지원하지만 block scop은 지원하지 않음
+	=> 즉 function 안의 지역변수는 밖에서 사용 할 수 없지만
+	=> for, while등에 사용된 var는 전역변수취급
+
+	
+	
+	*/
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>History</title>
+	<script>
+	
+	/*
+	
+	History
+	
+	개발자에게 꽤 중요한 브라우저 객체
+	
+	속성 
+	history.length : history 저장소에 저장된 URI 주소의 갯수
+	
+	메서드
+	history.back() : 이전 페이지로 이동
+	history.forward() : 다음 페이지로 이동
+	history.go(number) : number만큼 페이지 이동 
+		ex) history.go(-2) : 전전 페이지로 이동
+	
+	
+	
+	*/
+	
+	function init(){
+			
+			var length = document.getElimentById('length');
+			
+			length.innerHTML = 'history.length: ' + history.length
+			
+			
+			
+		}
+	
+	
+	window.onload = init;
+	</script>
+</head>
+<body>
+
+<h1>history example</h1>
+<h3 id="length"> </h3>
+
+<button id="back">back</button><button id="forward">forward</button><button id="go">go</button>
+	
+</body>
+</html>

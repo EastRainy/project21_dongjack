@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function test(name) {
+		var output = 'hello' + name + '...!';
+
+		return function() {
+			alert(output);
+
+		}
+	}
+
+	var result = test('JavaScript');
+	result();
+	
+	/*
+	함수가 return 되어 지역변수 output이 할당 해제되어 사용할 수 없어야 됨에도
+	실행 결과 result가 이상없이 실행
+	
+	=> 클로저(closer)라는 저장공간이 변수를 유지하여 실행 가능
+	
+	원래는 함수 실행 종료 후 변수가 할당 해제되어야 하지만 
+	지역변수가 함수 안에서 다른 함수에 의해 참조되어 질 때 클로저가 활성화
+	(실행시점이 다른 경우 할당해제로 인한 오류를 막기 위해)
+	
+	
+	*/
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

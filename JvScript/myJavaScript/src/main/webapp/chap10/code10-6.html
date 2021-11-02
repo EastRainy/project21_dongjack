@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	//동적으로 요소객체 생성, html 객체 내에 삽입하기
+
+	function init() {
+
+		var h1 = document.createElement('h1');
+		var tNode = document.createTextNode('Hello DOM');
+
+		h1.appendChild(tNode);
+		document.body.appendChild(h1);
+	}
+
+	window.onload = init;
+	
+	//document.body.innerHTML이 더 쉬워서
+	//잘 사용하지는 않음
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

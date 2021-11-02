@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	window.onload = function(){//window : 브라우저 탭을 나타내는 객체
+		//이것이 없으면 인터프리터상 body가 읽어지지 않았기 따문에 
+		//head에 위치해 있을때는 보여지지 않음
+		//자바스크립트는 HTML문서 크기, 협업시 구조 등으로 인해 따로 파일로 분리해 사용하는것이 나음
+		//단 그럼에도 HTML내에서 사용할경우 body보다 head에 위치시키는것이 좋다.
+		
+		var list = '';
+		
+		list += '<ul>';//리스트를 만들 때 쓰는 시작태그, unordered list => ul
+		
+		list += '	<li>Hello</li>'; // 리스트 안에 항목을 넣는 태그 li
+		list += '	<li>JavaScript</li>';
+		
+		list +='</ul>';//리스트를 만들 때 쓰는 끝태그
+	
+		document.body.innerHTML = list;
+		//document => 현재 HTML 문서를 나타내는 객체
+		
+	}//이벤트 핸들러 역활의 함수
+	
+	/*
+	
+		자바스크립트에서 이벤트를 발생할 수 있는 객체는 반드시 이벤트 처리를 위한 이벤트 속성을 제공하여야
+		한다.
+		window객체는 load라는 이벤트를 발생할 수 있다.
+		=> 웹페이지의 로드가 완료되면 발생하는 이벤트
+		
+		자바스크립트에서 이벤트 속성은 항상 'on + eventName' 이름 규칙을 가진다.
+		ex) window.onload
+		
+		
+		
+		
+	
+	*/
+	
+	
+	
+	
+	</script>
+</head>
+<body>
+
+	<script>
+		
+		var list = '';
+		
+		list += '<ul>';//리스트를 만들 때 쓰는 시작태그, unordered list => ul
+		
+		list += '	<li>Hello</li>'; // 리스트 안에 항목을 넣는 태그 li
+		list += '	<li>JavaScript</li>';
+		
+		list +='</ul>';//리스트를 만들 때 쓰는 끝태그
+	
+		document.body.innerHTML = list;
+		//document => 현재 HTML 문서를 나타내는 객체
+		
+	
+	
+	</script>
+	<!-- 이래도 작동됨 -->
+	
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*
+	5명의 학생 정보를 입력으로 받아 총점, 평균을 게산한 후 출력하는 코드.
+	
+	1) 학생 정보는 이름, 국어, 영어, 수학, 과학을 입력받는다.
+	2) 총점과 평균을 계산하여 저장
+	3) 성적순으로 정렬하여 저장한 후 출력
+	4) 출력은 성적 순으로, 이름, 국어, 영어, 수학, 과학, 총점 값을 body의 내용으로 출력
+	
+	객체, 배열을 이용하여 구현
+	
+	류현진 85 85 85 85
+	김광현 95 95 95 95
+	손흥민 75 75 75 75
+	이강인 80 80 80 80
+	황희조 90 90 90 90
+	
+	
+	
+	 */
+
+	var students = [];
+
+	for (var i = 0; i < 5; i++) {
+
+		var stu_info = prompt('학생 정보를 입력하세요.', '홍길동 92 95 88 85');
+		stu_info = stu_info.split(' ');
+
+		for (j = 1; j < stu_info.length; j++) {
+			stu_info[j] = Number(stu_info[j]);
+		}
+
+		var student = {
+			이름 : stu_info[0],
+			국어 : stu_info[1],
+			영어 : stu_info[2],
+			수학 : stu_info[3],
+			과학 : stu_info[4],
+
+			total : function() {
+				return this.국어 + this.영어 + this.수학 + this.과학;
+			},
+			avg : function() {
+				return (this.total() / 4)
+			},
+
+			toString : function() {
+
+				var output = '';
+
+				output += '<p>' + '이름 : ' + this.이름 + '</p>';
+				output += '<p>' + '국어 : ' + this.국어 + '</p>';
+				output += '<p>' + '영어 : ' + this.영어 + '</p>';
+				output += '<p>' + '수학 : ' + this.수학 + '</p>';
+				output += '<p>' + '과학 : ' + this.과학 + '</p>';
+				output += '<p>' + '총점 : ' + this.total() + '</p>';
+				output += '<p>' + '평균 : ' + this.avg() + '</p>';
+
+				output += '<hr />';
+
+				return output;
+
+			}
+		}
+		students.push(student);
+	}
+
+	for (var i = 0; i < students.length - 1; i++) {
+		for (var j = i + 1; j < students.length; j++) {
+			if (students[i].total() < students[j].total()) {
+				var temp = students[i];
+				students[i] = students[j];
+				students[j] = temp;
+			}
+		}
+	}
+
+	var out = '';
+	for ( var i in students) {
+
+		out += '<p>' + ((i * 1) + 1) + '번째 학생 </p>';
+		out += students[i].toString();
+	}
+
+	window.onload = function() {
+		document.body.innerHTML = out;
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

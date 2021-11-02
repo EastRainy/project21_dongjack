@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	
+	//eval : string문자열을 자바스크립트 코드로 실행
+	//외부에 String형식으로 저장해 놓은 외부데이터를 불러와 사용하는데에 사용 
+	
+	var code = '';
+	code+='var num = 1234;';
+	code+='alert("num: "+num);';
+	
+	eval(code);
+	
+	//eval함수에 의해 생성된 변수 등은 eval 이후에도 해석된 코드는 유지된다.
+	
+	alert(num);
+
+	
+	
+	
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

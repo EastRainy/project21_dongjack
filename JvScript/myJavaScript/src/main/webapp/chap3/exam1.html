@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var year;
+
+	year = Number(prompt('연도를 입력하세요', 2000));
+
+	if (year % 4 == 0) {
+
+		if (year % 100 == 0) {
+
+			if (year % 400 == 0) {
+
+				alert(year + "는 윤년입니다.");
+			} else {
+
+				alert(year + "는 평년입니다.");
+			}
+
+		} else {
+			alert(year + "는 윤년입니다.");
+
+		}
+
+	} else {
+		alert(year + "는 평년입니다.");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>
